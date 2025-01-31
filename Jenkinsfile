@@ -5,7 +5,7 @@ pipeline {
     options {
 
         // Retains only the last three builds for a day.
-        buildDiscarder(logRotator(numToKeep: 3, artifactNumToKeep: 3, daysToKeep: 1))
+        buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3', daysToKeepStr: '1'))
 
         // cause the build to time out if it runs for more than 12 hours
         timeout(time: 12, unit: 'HOURS')
